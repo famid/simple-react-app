@@ -28,10 +28,10 @@ const useFetch = (url) => {
         });
 
       }, 1000);
-
+      return () => console.log("Abort fetching data");
     }, [url]);
   
-  
+    
     return { data, isPending, error };
 }
 

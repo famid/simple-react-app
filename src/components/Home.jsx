@@ -5,7 +5,7 @@ import useFetch from '../useFetch';
 export default function Home() {
 
   // const { blogs, isPending, error } = useFetch('http://localhost:3000/blogs');
-  const { error, isPending, data: blogs } = useFetch('http://localhost:3000/blogss');
+  const { error, isPending, data: blogs } = useFetch('http://localhost:3000/blogs');
   return (
     <div className='home'>
        { error && <div>{ error }</div> }

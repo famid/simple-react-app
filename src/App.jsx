@@ -1,17 +1,23 @@
-import { useState } from 'react'
 import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
+import Create from './components/Create.jsx';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import BlogDetails from './components/BlogDetails.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <Router>
       <Navbar />
       <div className="content">
-         <Home />
+         <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/blogs/:id" element={<BlogDetails />} />
+         </Routes>
       </div>
-    </>
+    </Router>
   )
 }
 
